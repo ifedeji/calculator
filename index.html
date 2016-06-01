@@ -1,0 +1,116 @@
+<html>
+<head>
+    <title>Html calculator</title>
+    <style type="text/css">
+        body {
+            background-color: rgb(17,153,255);
+            text-align: center;
+        }
+        .calculator_container {
+            margin: auto;
+            height: 500px;
+            width: 400px;
+            border: 1px solid rgb(0,0,0);
+
+        }
+        input[type="textfield"] {
+            border: 1px solid rgb(0,0,0);
+            width: 400px;
+            height: 100px;
+            background-color: rgb(0,0,0);
+            color: rgb(17,153,255);
+            border-bottom: 1px solid #dedede;
+        }
+        input[type="button"] {
+            background-color: black;
+            color: white;
+            height: 100px;
+            width: 100px;
+            border: none;
+            margin: 0;
+            padding: 0;
+            float: left;
+            font-size: 50px;
+        }
+        .first_row {
+            height: 100px;
+            margin-right:100px;
+        }
+        .second_row {
+            height: 100px;
+            margin-right:100px;  
+        }
+         .third_row {
+            height: 100px;
+            margin-right:100px;
+        }
+         .last_row {
+            height: 100px;
+            margin-right:100px;
+        }
+        .second_col input[type= "button"]{
+            float: none;
+            display: block;
+            background-color: #33aaff;
+        }
+        .second_col {
+            float: right;
+            position: relative;
+            top: -400px;
+            border-left: 1px solid #dedede;
+        }
+        .wrapper{
+            overflow: hidden;
+        }
+        .wrapper_one{
+            float: left;
+        }
+        input[type="reset"] {
+            height: 100px;
+            width: 100px;
+            background-color: black;
+            color: white;
+            border: 1px solid rgb(0,0,0);
+            font-size: 25px;
+        }
+    </style>
+</head>
+    <body>
+        <div class="calculator_container">
+        <form name="calculator" >
+            <div class="text_field">
+                <input type="textfield" name="ans" value="">
+            </div>
+            <div class="wrapper">
+            <div class="wrapper_one">
+            <div class ="first_row">
+                <input type="button" value="1" onClick="document.calculator.ans.value+='1'">
+                <input type="button" value="2" onClick="document.calculator.ans.value+='2'">
+                <input type="button" value="3" onClick="document.calculator.ans.value+='3'">
+            </div>
+            <div class="second_row">
+                <input type="button" value="4" onClick="document.calculator.ans.value+='4'">
+                <input type="button" value="5" onClick="document.calculator.ans.value+='5'">
+                <input type="button" value="6" onClick="document.calculator.ans.value+='6'">
+            </div>
+            <div class="third_row">
+                <input type="button" value="7" onClick="document.calculator.ans.value+='7'">
+                <input type="button" value="8" onClick="document.calculator.ans.value+='8'">
+                <input type="button" value="9" onClick="document.calculator.ans.value+='9'">
+            </div>
+            <div class="last_row">
+                <input type="button" value="0" onClick="document.calculator.ans.value+='0'">
+                <input type="reset" value="Reset">
+                <input type="button" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)">
+            </div>
+            </div>
+            <div class="second_col">
+                <input type="button" value="+" onClick="document.calculator.ans.value+='+'">
+                <input type="button" value="-" onClick="document.calculator.ans.value+='-'">
+                <input type="button" value="*" onClick="document.calculator.ans.value+='*'"> 
+                <input type="button" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)">
+            </div>
+            </div>
+        </form>
+    </body>
+</html>
