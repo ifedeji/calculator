@@ -3,26 +3,28 @@
     <title>Html calculator</title>
     <style type="text/css">
         body {
-            background-color: rgb(17,153,255);
+            background-color: #0CAABE;
             text-align: center;
         }
         .calculator_container {
             margin: auto;
             height: 500px;
             width: 400px;
-            border: 1px solid rgb(0,0,0);
+            border: 1px solid #424242;
 
         }
         input[type="textfield"] {
-            border: 1px solid rgb(0,0,0);
+            border: 1px solid #424242;
             width: 400px;
             height: 100px;
-            background-color: rgb(0,0,0);
-            color: rgb(17,153,255);
+            background-color: #424242;
+            color: #78CCCC;
             border-bottom: 1px solid #dedede;
+            font-size: 60px;
+            padding: 20px;
         }
         input[type="button"] {
-            background-color: black;
+            background-color: #424242;
             color: white;
             height: 100px;
             width: 100px;
@@ -47,11 +49,12 @@
          .last_row {
             height: 100px;
             margin-right:100px;
+            background-color: #424242;
         }
         .second_col input[type= "button"]{
             float: none;
             display: block;
-            background-color: #33aaff;
+            background-color: #78CCCC;
         }
         .second_col {
             float: right;
@@ -68,14 +71,21 @@
         input[type="reset"] {
             height: 100px;
             width: 100px;
-            background-color: black;
+            background-color: #424242;
             color: white;
-            border: 1px solid rgb(0,0,0);
-            font-size: 25px;
+            border: 1px solid #424242;
+            font-size: 60px;
         }
+        .zero input[type="button"] {
+            border-radius: 50%;
+            border: 1px solid #424242;
+            background-color: #78CCCC;
+        }
+
     </style>
 </head>
     <body>
+        <div>
         <div class="calculator_container">
         <form name="calculator" >
             <div class="text_field">
@@ -99,9 +109,12 @@
                 <input type="button" value="9" onClick="document.calculator.ans.value+='9'">
             </div>
             <div class="last_row">
-                <input type="button" value="0" onClick="document.calculator.ans.value+='0'">
-                <input type="reset" value="Reset">
-                <input type="button" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)">
+                <input type="reset" value="C">
+                <input type="button" value="%" onClick="document.calculator.ans.value+='%'"'>
+                <span class="zero">
+                <input type="button" value="0" onClick="document.calculator.ans.value+='0'"'>
+                </span>
+                </div>
             </div>
             </div>
             <div class="second_col">
@@ -112,5 +125,6 @@
             </div>
             </div>
         </form>
+        </div>
     </body>
 </html>
